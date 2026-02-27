@@ -1,0 +1,9 @@
+﻿{
+  "id": "obsidian-mindspark-plugin",
+  "name": "MindSpark",
+  "version": "1.0.0",
+  "minAppVersion": "1.0.0",
+  "description": "Surface forgotten notes through weighted randomness and semantic proximity.",
+  "author": "qishangc",
+  "isDesktopOnly": false
+}

@@ -1,0 +1,21 @@
+# Dependencies
+node_modules/
+
+# Build output (可选：如果你想让仓库包含 main.js 供手动安装，可以去掉这行)
+# main.js
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.idea/
+.vscode/
+
+# Archive & working directories
+_archive/
+copilot-work/
+docs/
+
+# Obsidian
+data.json

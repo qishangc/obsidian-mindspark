@@ -1,0 +1,76 @@
+﻿.mindspark-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.mindspark-header h3 {
+  margin: 0;
+}
+
+.mindspark-notes {
+  display: flex;
+  flex-direction: column;
+}
+
+.mindspark-card {
+  background: var(--background-secondary);
+  border: 1px solid var(--background-modifier-border);
+  border-radius: 4px;
+  padding: 12px;
+  margin-bottom: 8px;
+  cursor: pointer;
+  transition: background 150ms;
+}
+
+.mindspark-card:hover,
+.mindspark-card:focus-visible {
+  background: var(--background-modifier-hover);
+  outline: none;
+}
+
+.mindspark-card-title {
+  font-weight: 600;
+  color: var(--text-normal);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom: 6px;
+}
+
+.mindspark-card-preview {
+  color: var(--text-muted);
+  font-size: var(--font-smaller);
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.mindspark-onboarding {
+  border: 1px dashed var(--background-modifier-border);
+  background: var(--background-secondary);
+  border-radius: 4px;
+  padding: 12px;
+  margin-bottom: 10px;
+}
+
+.mindspark-onboarding button {
+  margin-top: 10px;
+}
+
+.mindspark-empty {
+  text-align: center;
+  color: var(--text-faint);
+  padding: 24px 12px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mindspark-card,
+  .mindspark-card:hover,
+  .mindspark-card:focus-visible {
+    transition: none;
+    animation: none;
+  }
+}

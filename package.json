@@ -1,0 +1,19 @@
+﻿{
+  "name": "mindspark",
+  "version": "1.0.0",
+  "description": "MindSpark Obsidian plugin",
+  "main": "main.js",
+  "scripts": {
+    "dev": "node esbuild.config.mjs",
+    "build": "tsc -noEmit -skipLibCheck && node esbuild.config.mjs production"
+  },
+  "dependencies": {
+    "obsidian": "latest"
+  },
+  "devDependencies": {
+    "@types/node": "latest",
+    "esbuild": "latest",
+    "tslib": "latest",
+    "typescript": "latest"
+  }
+}
