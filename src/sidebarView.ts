@@ -148,7 +148,7 @@ export class MindSparkView extends ItemView {
     this.noteContainerEl.createDiv({ cls: "mindspark-empty", text: message });
   }
 
-  async onClose(): Promise<void> {
+  async onClose() {
     this.noteContainerEl = null;
   }
 

@@ -36,7 +36,7 @@ export function parseFrontmatterTitle(content: string): string | null {
 
     const match = line.match(/^title\s*:\s*(.+)$/i);
     if (match) {
-      return match[1].trim().replace(/^['\"]|['\"]$/g, "") || null;
+      return match[1].trim().replace(/^['"]|['"]$/g, "") || null;
     }
   }
 

@@ -66,6 +66,16 @@
   padding: 24px 12px;
 }
 
+.mindspark-folder-disabled {
+  opacity: 0.4;
+}
+
+.mindspark-folder-depth-1 { padding-left: 20px; }
+.mindspark-folder-depth-2 { padding-left: 40px; }
+.mindspark-folder-depth-3 { padding-left: 60px; }
+.mindspark-folder-depth-4 { padding-left: 80px; }
+.mindspark-folder-depth-5 { padding-left: 100px; }
+
 @media (prefers-reduced-motion: reduce) {
   .mindspark-card,
   .mindspark-card:hover,

@@ -9,7 +9,7 @@ export default class MindSparkPlugin extends Plugin {
   data!: MindSparkData;
   settings!: MindSparkSettings;
 
-  async onload(): Promise<void> {
+  async onload() {
     this.data = await loadPluginData(this);
     this.settings = this.data.settings;
 
@@ -38,8 +38,8 @@ export default class MindSparkPlugin extends Plugin {
     this.addSettingTab(new MindSparkSettingsTab(this.app, this));
   }
 
-  async onunload(): Promise<void> {
-    this.app.workspace.detachLeavesOfType(VIEW_TYPE_MINDSPARK);
+  onunload() {
+    // View cleanup is handled by Obsidian automatically
   }
 
   async activateView(): Promise<void> {

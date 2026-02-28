@@ -62,11 +62,12 @@ export class MindSparkSettingsTab extends PluginSettingTab {
           });
         });
 
-      // 缩进：每层 20px
-      setting.settingEl.style.paddingLeft = `${depth * 20}px`;
+      const settingEl = setting.settingEl;
+      settingEl.addClass("mindspark-folder-item");
+      settingEl.addClass(`mindspark-folder-depth-${depth}`);
 
       if (isParentOff) {
-        setting.settingEl.style.opacity = "0.4";
+        settingEl.addClass("mindspark-folder-disabled");
       }
 
       // 递归渲染子文件夹
@@ -95,11 +96,9 @@ export class MindSparkSettingsTab extends PluginSettingTab {
       });
 
     // --- 排除文件夹（树形结构）---
-    containerEl.createEl("h3", { text: "排除文件夹" });
-    containerEl.createEl("p", {
-      text: "关闭开关以排除该文件夹中的笔记。排除父文件夹会同时排除所有子文件夹。",
-      cls: "setting-item-description"
-    });
+    new Setting(containerEl).setName("排除文件夹").setHeading();
+    new Setting(containerEl)
+      .setDesc("关闭开关以排除该文件夹中的笔记。排除父文件夹会同时排除所有子文件夹。");
 
     const root = this.app.vault.getRoot();
     const hasSubfolders = root.children.some((c) => c instanceof TFolder);
