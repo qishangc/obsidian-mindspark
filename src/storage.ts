@@ -12,7 +12,7 @@ function mergeSettings(input?: Partial<MindSparkSettings>): MindSparkSettings {
   return {
     ...DEFAULT_SETTINGS,
     ...(input ?? {}),
-    excludedFolders: Array.isArray(input?.excludedFolders) ? input!.excludedFolders : []
+    excludedFolders: Array.isArray(input?.excludedFolders) ? input.excludedFolders : []
   };
 }
 
@@ -45,7 +45,7 @@ export async function loadPluginData(plugin: PluginStorage): Promise<MindSparkDa
     settings: mergeSettings(raw?.settings),
     viewHistory: normalizeViewHistory(raw?.viewHistory),
     lastShownPaths: Array.isArray(raw?.lastShownPaths)
-      ? raw!.lastShownPaths.filter((item): item is string => typeof item === "string")
+      ? raw.lastShownPaths.filter((item): item is string => typeof item === "string")
       : []
   };
 }
