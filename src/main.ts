@@ -46,7 +46,7 @@ export default class MindSparkPlugin extends Plugin {
     const existingLeaf = this.app.workspace.getLeavesOfType(VIEW_TYPE_MINDSPARK)[0];
 
     if (existingLeaf) {
-      this.app.workspace.revealLeaf(existingLeaf);
+      await this.app.workspace.revealLeaf(existingLeaf);
       return;
     }
 
@@ -56,7 +56,7 @@ export default class MindSparkPlugin extends Plugin {
     }
 
     await rightLeaf.setViewState({ type: VIEW_TYPE_MINDSPARK, active: true });
-    this.app.workspace.revealLeaf(rightLeaf);
+    await this.app.workspace.revealLeaf(rightLeaf);
   }
 
   async persistPluginData(): Promise<void> {
